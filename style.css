@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: helvetica, sans-serif;
+	color: #ffffff;
+	font-weight: bold;
+	background: red;
+	opacity: 0.0;
+	cursor: default;
+	-webkit-user-select: none;
+}
+
+.btn {
+	padding: 5px;
+	background: rgba(200, 200, 200, 0.8);
+	position: absolute;
+	font-size: 0;
+}
+.btn:hover {
+	cursor: pointer;
+}
+
+.menu-icon {
+	height: 36px;
+}
+
+#btn-apps {
+	top: 0;
+	left: 0;
+}
+
+#btn-settings {
+	top: 0;
+	right: 0;
+}
+
+#gcalendar-wrapper {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#gtasks-wrapper {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#center-wrapper {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+#time {
+	font-size: 120px;
+}
+
+#weather {
+	font-size: 20px;
+}

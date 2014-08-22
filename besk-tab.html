@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>New Tab</title>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script src='jquery-1.11.1.min.js'></script>
+		<script src='jquery.simpleWeather.min.js'></script>
+		<script type='text/javascript' src='func.js'></script>
+	</head>
+
+	<body>
+		<div id='btn-apps' class='btn'>
+			<a href='chrome://apps'>
+				<img src='art/apps.png' class='menu-icon' />
+			</a>
+		</div>
+		<div id='btn-settings' class='btn'>
+			<img src='art/settings.png' class='menu-icon' />
+		</div>
+		<div id='gcalendar-wrapper'>Calendar wrapper</div>
+		<div id='gtasks-wrapper'>Tasks wrapper</div>
+		<div id='center-wrapper'>
+			<div id='q-name' class='init'>Hi, my name is <input type='text' id='a-name' /></div>
+			<div id='q-location' class='init'>I live in <input type='text' id='a-location1' />,<input type='text' id='a-location2' maxlength='2'/></div>
+			<div id='time' class='load'></div>
+			<div id='weather-wrapper' class='load'>
+				<div id='weather-temp'></div>
+				<div id='weather-conditions'></div>
+				<div id='weather-five-day'></div>
+			</div>
+		</div>
+	</body>
+</html>
