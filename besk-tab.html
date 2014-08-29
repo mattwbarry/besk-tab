@@ -5,6 +5,7 @@
 		<link rel='stylesheet' type='text/css' href='style.css' />
 		<script src='jquery-1.11.1.min.js'></script>
 		<script src='jquery.simpleWeather.min.js'></script>
+		<script type='text/javascript' src='keys.js'></script>
 		<script type='text/javascript' src='func.js'></script>
 	</head>
 
@@ -17,12 +18,27 @@
 		<div id='btn-settings' class='btn'>
 			<img src='art/settings.png' class='menu-icon' />
 		</div>
-		<div id='gcalendar-wrapper'>Calendar wrapper</div>
-		<div id='gtasks-wrapper'>Tasks wrapper</div>
+		<div id='settings-wrapper'>
+			<p>Change name</p>
+			<input type='text' id='s-name' class='s-text' data-key='name' />
+			<p>Change location</p>
+			<input type='text' id='s-city' class='s-text' data-key='city' />
+			<input type='text' id='s-state' class='s-text' data-key='state' maxlength='2' />
+			<p>Show 5-day forecast</p>
+			<p>Show Weather icon</p>
+			<p>Units F/C</p>
+			<p id='s-time-format'>24 hour clock</p>
+			<p>Calendar settings</p>
+			<p>Check for updates</p>
+			<p>Donate!</p>
+		</div>
+		<div id='gcalendar-wrapper'>Calendar wrapper</div> <!-- calendar updates once every hour, or user can press a refresh button -->
+		<div id='gtasks-wrapper'>Tasks wrapper</div> <!-- tasks updates once every hour, or user can press a refresh button. if task is checked off in browser, make sure to change the local data -->
 		<div id='center-wrapper'>
-			<div id='q-name' class='init'>Hi, my name is <input type='text' id='a-name' /></div>
-			<div id='q-location' class='init'>I live in <input type='text' id='a-location1' />,<input type='text' id='a-location2' maxlength='2'/></div>
+			<div id='q-name' class='init'>Hi, my name is <input type='text' id='a-name' placeholder='Franklin' /></div>
+			<div id='q-location' class='init'>I live in <input type='text' id='a-city' placeholder='city' />,<input type='text' id='a-state' placeholder='state' maxlength='2'/></div>
 			<div id='time' class='load'></div>
+			<div id='welcome'></div>
 			<div id='weather-wrapper' class='load'>
 				<div id='weather-temp'></div>
 				<div id='weather-conditions'></div>

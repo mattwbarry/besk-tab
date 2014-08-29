@@ -19,3 +19,35 @@
 	},
 	"content_security_policy": "script-src 'self' https://query.yahooapis.com/; object-src 'self'"
 }
+
+/*
+
+CUSTOM WEATHER ICON TO-DO LIST
+
+3 sever thunderstorms
+5 mixed rain and snow
+6 mixed rain and sleet
+7 mixed snow and sleet
+8 freezing drizzle
+10 freezing rain
+13 snow flurries
+14 light snow showers
+15 blowing snow
+18 sleet
+19 dust
+20 foggy
+21 haze
+22 smoky
+33 fair(night)
+34 fair(day)
+35 mixed rain and hail
+38 scattered thunderstorms
+39 scattered thunderstorms
+40 scattered showers
+41 heavy snow
+42 scattered snow showers
+43 heavy snow
+46 snow showers
+47 isolated thundershowers
+
+*/

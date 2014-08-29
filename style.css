@@ -4,20 +4,28 @@ body {
 	font-family: helvetica, sans-serif;
 	color: #ffffff;
 	font-weight: bold;
-	background: red;
+	background: url('http://wallpapers.wallbase.cc/rozne/wallpaper-3032573.jpg');
 	opacity: 0.0;
 	cursor: default;
 	-webkit-user-select: none;
+	overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+   color: #ffffff;
 }
 
 .btn {
 	padding: 5px;
-	background: rgba(200, 200, 200, 0.8);
+	/*background: rgba(200, 200, 200, 0.8);*/
 	position: absolute;
 	font-size: 0;
+	opacity: 0.6;
+	transition: opacity 0.2s;
 }
 .btn:hover {
 	cursor: pointer;
+	opacity: 1.0;
 }
 
 .menu-icon {
@@ -34,6 +42,37 @@ body {
 	right: 0;
 }
 
+#settings-wrapper {
+	width: 200px;
+	height: 100%;
+	background: #242424;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -200px;
+	z-index: 1;
+}
+#settings-wrapper p {
+	padding: 10px 10px;
+	margin: 1px 0px;
+	transition: background 0.2s;
+}
+#settings-wrapper p:hover {
+	cursor: pointer;
+	background: rgba(255,255,255,0.2);
+}
+.s-text {
+	border: none;
+	border-bottom: 2px solid #ffffff;
+	background: none;
+	outline: none;
+	padding: 1px 0px;
+	margin: 0px 10px;
+	width: 180px;
+	color: #ffffff;
+	font-size: 16px;
+}
+
 #gcalendar-wrapper {
 	position: absolute;
 	bottom: 0;
@@ -46,12 +85,37 @@ body {
 	right: 0;
 }
 
+.init {
+	display: none;
+	position: absolute;
+	top: -15px;
+	left: 0;
+	right: 0;
+	font-size: 20px;
+}
+	#a-name, #a-city, #a-state {
+		font-size: 20px;
+		background: none;
+		border: none;
+		outline: none;
+		border-bottom: 2px solid #ffffff;
+		color: #ffffff;
+		padding: 1px 0px;
+	}
+
+.load {
+	display: block;
+}
+
 #center-wrapper {
 	position: absolute;
-	top: 50%;
-	bottom: 50%;
+	top: 0;
+	bottom: 0;
+	height: 200px;
 	width: 100%;
+	margin: auto;
 	text-align: center;
+	text-shadow: 1px 1px 1px #303030;
 }
 
 #time {
