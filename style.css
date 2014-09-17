@@ -4,11 +4,14 @@ body {
 	font-family: helvetica, sans-serif;
 	color: #ffffff;
 	font-weight: bold;
-	background: url('http://wallpapers.wallbase.cc/rozne/wallpaper-3032573.jpg');
 	opacity: 0.0;
 	cursor: default;
 	-webkit-user-select: none;
 	overflow: hidden;
+	background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-position: 50% 50% !important;
+    background-size: cover !important;
 }
 
 ::-webkit-input-placeholder {
@@ -43,18 +46,18 @@ body {
 }
 
 #settings-wrapper {
-	width: 200px;
+	width: 275px;
 	height: 100%;
 	background: #242424;
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	right: -200px;
+	right: -275px;
 	z-index: 1;
 }
 #settings-wrapper p {
 	padding: 10px 10px;
-	margin: 1px 0px;
+	margin: 0px;
 	transition: background 0.2s;
 }
 #settings-wrapper p:hover {
@@ -68,7 +71,7 @@ body {
 	outline: none;
 	padding: 1px 0px;
 	margin: 0px 10px;
-	width: 180px;
+	width: 255px;
 	color: #ffffff;
 	font-size: 16px;
 }
@@ -77,6 +80,19 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	background: rgba(0, 0, 0, 0.4);
+	width: 300px;
+	padding: 5px;
+	text-shadow: 1px 1px 1px #303030;
+}
+.gcalendar-title {
+	text-align: center;
+}
+.gcalendar-summary {
+	font-size: 13px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #gtasks-wrapper {
@@ -111,7 +127,7 @@ body {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	height: 200px;
+	height: 285px;
 	width: 100%;
 	margin: auto;
 	text-align: center;
@@ -122,6 +138,16 @@ body {
 	font-size: 120px;
 }
 
-#weather {
-	font-size: 20px;
+#weather-5-day {
+	margin-top: 20px;
+	font-size: 14px;
+}
+.weather-5-day-day {
+	display: inline-block;
+}
+.weather-5-day-icon {
+	text-align: center;
+}
+.weather-5-day-icon img {
+	height: 20px;
 }

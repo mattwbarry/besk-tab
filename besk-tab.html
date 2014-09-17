@@ -5,8 +5,38 @@
 		<link rel='stylesheet' type='text/css' href='style.css' />
 		<script src='jquery-1.11.1.min.js'></script>
 		<script src='jquery.simpleWeather.min.js'></script>
-		<script type='text/javascript' src='keys.js'></script>
+		<script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
 		<script type='text/javascript' src='func.js'></script>
+
+		<!--
+		CUSTOM WEATHER ICON UPDATE TO-DO LIST
+
+		3 sever thunderstorms
+		5 mixed rain and snow
+		6 mixed rain and sleet
+		7 mixed snow and sleet
+		8 freezing drizzle
+		10 freezing rain
+		13 snow flurries
+		14 light snow showers
+		15 blowing snow
+		18 sleet
+		19 dust
+		20 foggy
+		21 haze
+		22 smoky
+		33 fair(night)
+		34 fair(day)
+		35 mixed rain and hail
+		38 scattered thunderstorms
+		39 scattered thunderstorms
+		40 scattered showers
+		41 heavy snow
+		42 scattered snow showers
+		43 heavy snow
+		46 snow showers
+		47 isolated thundershowers
+		-->
 	</head>
 
 	<body>
@@ -24,25 +54,62 @@
 			<p>Change location</p>
 			<input type='text' id='s-city' class='s-text' data-key='city' />
 			<input type='text' id='s-state' class='s-text' data-key='state' maxlength='2' />
-			<p>Show 5-day forecast</p>
-			<p>Show Weather icon</p>
-			<p>Units F/C</p>
-			<p id='s-time-format'>24 hour clock</p>
-			<p>Calendar settings</p>
-			<p>Check for updates</p>
-			<p>Donate!</p>
+			<p id='s-icon'>Show weather icon</p>
+			<p id='s-5-day'>Show 5-day forecast</p>
+			<p id='s-units'>Units: F</p>
+			<p id='s-time-format'>12 hour clock</p>
+			<!--<p>Calendar settings</p>-->
+			<!--<p>Check for updates</p>-->
+			<!--<p>Donate!</p>-->
 		</div>
-		<div id='gcalendar-wrapper'>Calendar wrapper</div> <!-- calendar updates once every hour, or user can press a refresh button -->
-		<div id='gtasks-wrapper'>Tasks wrapper</div> <!-- tasks updates once every hour, or user can press a refresh button. if task is checked off in browser, make sure to change the local data -->
+		<div id='gcalendar-wrapper'></div> <!-- calendar updates once every hour, or user can press a refresh button -->
+		<!--<div id='gtasks-wrapper'>Tasks wrapper</div>--> <!-- tasks updates once every hour, or user can press a refresh button. if task is checked off in browser, make sure to change the local data -->
 		<div id='center-wrapper'>
-			<div id='q-name' class='init'>Hi, my name is <input type='text' id='a-name' placeholder='Franklin' /></div>
+			<div id='q-name' class='init'>Hello, my name is <input type='text' id='a-name' placeholder='Franklin' /></div>
 			<div id='q-location' class='init'>I live in <input type='text' id='a-city' placeholder='city' />,<input type='text' id='a-state' placeholder='state' maxlength='2'/></div>
 			<div id='time' class='load'></div>
 			<div id='welcome'></div>
 			<div id='weather-wrapper' class='load'>
-				<div id='weather-temp'></div>
-				<div id='weather-conditions'></div>
-				<div id='weather-five-day'></div>
+				<div id='weather-conditions-icon'><img src='' id='weather-conditions-icon-img' /></div>
+				<span id='weather-temp'></span>
+				<span id='weather-conditions-text'></span>
+				<div id='weather-5-day'>
+					<span class='weather-5-day-day' id='weather-5-day-1'>
+						<div class='weather-5-day-icon'>
+							<img src='' />
+						</div>
+						<div class='weather-5-day-high'></div>
+						<div class='weather-5-day-low'></div>
+					</span>
+					<span class='weather-5-day-day' id='weather-5-day-2'>
+						<div class='weather-5-day-icon'>
+							<img src='' />
+						</div>
+						<div class='weather-5-day-high'></div>
+						<div class='weather-5-day-low'></div>
+					</span>
+					<span class='weather-5-day-day' id='weather-5-day-3'>
+						<div class='weather-5-day-icon'>
+							<img src='' />
+						</div>
+						<div class='weather-5-day-high'></div>
+						<div class='weather-5-day-low'></div>
+					</span>
+					<span class='weather-5-day-day' id='weather-5-day-4'>
+						<div class='weather-5-day-icon'>
+							<img src='' />
+						</div>
+						<div class='weather-5-day-high'></div>
+						<div class='weather-5-day-low'></div>
+					</span>
+					<span class='weather-5-day-day' id='weather-5-day-5'>
+						<div class='weather-5-day-icon'>
+							<img src='' />
+						</div>
+						<div class='weather-5-day-high'></div>
+						<div class='weather-5-day-low'></div>
+					</span>
+				</div>
 			</div>
 		</div>
 	</body>
